@@ -1,0 +1,75 @@
+1.Write a Python function to find the maximum and minimum elements in a list.
+ans:
+def find_max_min(numbers):
+    max_num = numbers[0]
+    min_num = numbers[0]
+    for num in numbers:
+        if num > max_num:
+            max_num = num
+        elif num < min_num:
+            min_num = num
+    return max_num, min_num
+
+# Example usage
+numbers = [1, 2, 3, 4, 5]
+max_num, min_num = find_max_min(numbers)
+print("Max number:", max_num)
+print("Min number:", min_num)
+2.Write a Python function that takes a list of strings and returns the longest string in the list.
+ans:
+def find_longest_string(strings):
+    longest_string = strings[0]
+    for string in strings:
+        if len(string) > len(longest_string):
+            longest_string = string
+    return longest_string
+
+# Example usage
+strings = ["cat", "dog", "elephant", "zebra"]
+longest_string = find_longest_string(strings)
+print("Longest string:", longest_string)
+3.Write a Python function that takes two lists and returns a new list that contains all the elements from both lists, with duplicates removed.
+ans:
+def merge_lists(list1, list2):
+    merged_list = list1 + list2
+    return list(set(merged_list))
+
+# Example usage
+list1 = [1, 2, 3]
+list2 = [3, 4, 5]
+merged_list = merge_lists(list1, list2)
+print("Merged list:", merged_list)
+4.Write a function to check whether a given number is even or odd.
+5.Write a function to check whether a given string is a palindrome or not.
+6.Write a function to convert a temperature from Celsius to Fahrenheit.
+7.Write a function to find the sum of all the digits in a given number.
+8.Write a function to reverse a given string.
+9.Write a function to check whether a given year is a leap year or not.
+11.Write a function to find the length of the longest word in a given sentence.
+12.Write a function to check whether a given number is a perfect square or not.
+13.Write a function to find the largest and smallest number in a given list.
+14.Write a function to count the number of vowels in a given string.
+15.Write a function to calculate the area of a circle given its radius.
+16.Write a function to find the second largest number in a given list.
+17.Write a function to check whether a given string contains only alphabets or not.
+18.Write a function to find the sum of all the elements in a given list.
+19.Write a function to check whether a given string is a pangram or not.
+
+20.Write a function to check whether a given string is a pangram or not.
+
+eg:The quick brown fox jumps over the lazy dog,
+import string
+
+def is_pangram(s):
+    # Create a set of all alphabets
+    alphabets = set(string.ascii_lowercase)
+    # Convert the input string to lowercase
+    s = s.lower()
+    # Remove all non-alphabetic characters
+    s = ''.join(c for c in s if c.isalpha())
+    # Check if the set of unique alphabets in the input string is equal to the set of all alphabets
+    return set(s) == alphabets
+
+
+
+
