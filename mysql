@@ -1,0 +1,90 @@
+https://bobbyhadz.com/images/blog/mysql-failed-error-set-password-has-no-significance-for-user-root/failed-error-set-password-has-no-significance-for-user-root.webp
+
+
+To solve the error "Failed! Error: SET PASSWORD has no significance for user 'root'@'localhost'":
+
+1.Open a new terminal window and terminate the process in which you issued the mysql_secure_installation command.
+********************
+sudo pkill -f mysql_secure_installation
+
+# 👇️ or
+sudo killall -9 mysql_secure_installation
+
+sudo mysql
+
+# 👇️ replace `your_root_password_here` with your actual password
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_root_password_here';
+
+# 👇️ exit after issuing the command
+exit
+sudo mysql_secure_installation
+
+mysql -u root -p
+*************************************
+ 163  dpkg --get -selections
+  164  dpkg --get-selections
+  165  dpkg --get-selections|mysql
+  166  clear
+  167  sudo apt install mysql-server
+  168  systemctl status mysql
+  169  s
+  170  sudo mysql_secure_installation
+  171  sudo pkill -f mysql_secure_installation
+  172  sudo mysql_secure_installation
+  173  sudo mysql
+  174  sudo mysql_secure_installation
+  175  sudo mysql
+  176  sudo mysql_secure_installation
+  177  sudo mysql -u root -p
+  178  history
+****************************************
+->lsb_release -a
+->sudo apt-get update or apt-get update
+->dpkg-reconfigure mysql-apt-config
+    ->ok//
+->apt-get install mysql-workbench-community
+/* search in linux search bar */
+***********************************************
+HOW TO INSTALL MYSQL AND CREATE DATABASE,TABLES,dUMP AND RETORE MYSQL ON LINUX MINT 20.2
+***********************************************************************************
+->lsb_release -a
+->apt install mysql-server mysql-client -y
+-> mysql_secure_installation
+    ->y
+    ->1
+    ->
+->mysql -u root -p
+    ->show databases;
+    ->create database linuxhelp;
+    ->use linuxhelp
+    ->create table employee(empno int,name varchar(20),salary int);
+    ->insert into employee values(101,"alex",10000);
+    ->insert into employee values(102,"kevin",15000);
+    ->insert into employee values(103,"richard",20000);
+    ->select*from employee;
+    ->show databases;
+    ->use linuxhelp;
+    ->show tables;
+    ->quit
+->mysqldump -u root -p linuxhelp > linuxhelbkp.sql
+//Enter the password:
+->ls
+linuxhelbkp.sql
+->mysql -u root -p
+//Enter the password:
+    ->drop database linuxhelp;
+    ->show databases;
+    ->create database linuxhelp;
+    ->quit
+->mysql -u root -p -h localhost linuxhelp < linuxhelbkp.sql
+//Enter the password:
+->mysql -u root -p
+    ->show databases;
+    ->use linuxhelp
+    ->use linuxhelp
+    ->show tables;   
+
+
+
+
+
