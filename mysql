@@ -84,7 +84,8 @@ linuxhelbkp.sql
     ->use linuxhelp
     ->show tables;   
 
-
+to delete the database 
+-> DROP DATABASE databasename;
 
 
 
